@@ -6,8 +6,8 @@ package proyectoestructuradedatos;
  * @author gabriel
  */
 public final class Producto {
-    private String nombre;
-    private int codigo, cantidadEnBodega, precioCompra, precioVenta;
+    private String nombre; // mantener el nombre del producto
+    private int codigo, cantidadEnBodega, precioCompra, precioVenta; // mantener codigos, cantidad en bodega y precios
     
     public Producto(String nombre, int codigo, int cantidadEnBodega, int precioCompra, int precioVenta){
         this.nombre = nombre;
