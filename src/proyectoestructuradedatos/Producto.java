@@ -17,6 +17,13 @@ public final class Producto {
         this.precioVenta = precioVenta;
     }
 
+    public Producto(String nombre, int codigo) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+    }
+    
+    
+
     public String getNombre() {
         return nombre;
     }
