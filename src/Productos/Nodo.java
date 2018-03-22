@@ -2,7 +2,7 @@ package Productos;
 
 /**
  * La aplicacion no contara con acceso a BD
- * por lo cual se estara usando una lista circular para guardar los elementos
+ * por lo cual se estara usando una lista simple circular para guardar los elementos
  * @author gabriel
  */
 public class Nodo {

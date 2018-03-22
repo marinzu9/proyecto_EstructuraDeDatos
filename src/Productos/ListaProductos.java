@@ -1,9 +1,9 @@
 package Productos;
-import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 /**
  * Clase lista simple circular que mantendra todas las operaciones
- * a realizar con los productos
+ * a realizar con los productos. CRUD. 
  * @author gabriel
  */
 public class ListaProductos {
