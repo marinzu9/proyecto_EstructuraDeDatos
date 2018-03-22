@@ -1,4 +1,4 @@
-package proyectoestructuradedatos;
+package Productos;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 /**

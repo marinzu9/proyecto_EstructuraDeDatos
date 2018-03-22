@@ -1,4 +1,4 @@
-package proyectoestructuradedatos;
+package Productos;
 
 /**
  * La aplicacion no contara con acceso a BD

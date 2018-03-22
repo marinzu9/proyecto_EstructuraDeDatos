@@ -1,4 +1,4 @@
-package proyectoestructuradedatos;
+package Productos;
 
 /**
  * Clase producto que contendra todo lo relevate a

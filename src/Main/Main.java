@@ -3,7 +3,9 @@
  * Software de inventario para uso comercial.
  */
 
-package proyectoestructuradedatos;
+package Main;
+
+import Productos.*;
 
 /**
  *
