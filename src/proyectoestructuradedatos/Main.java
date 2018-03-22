@@ -12,7 +12,13 @@ package proyectoestructuradedatos;
 public class Main {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        ListaProductos lista = new ListaProductos();
+        lista.agregarProducto(new Producto("Gabriel",10,10,10,10));
+        lista.mostrarProductos();
+        lista.editarProducto(0);
+        lista.editarProducto(10);
+        lista.mostrarProductos();
     }
     
 }

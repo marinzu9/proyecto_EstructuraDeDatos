@@ -16,7 +16,10 @@ public final class Producto {
         this.precioCompra = precioCompra;
         this.precioVenta = precioVenta;
     }
-
+    
+    // constructor para crear objetos sin parametros
+    public Producto (){}
+    
     public String getNombre() {
         return nombre;
     }
