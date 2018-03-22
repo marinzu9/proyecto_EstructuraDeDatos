@@ -14,11 +14,15 @@ public class Main {
     public static void main(String[] args) {
         
         ListaProductos lista = new ListaProductos();
-        lista.agregarProducto(new Producto("Gabriel",10,10,10,10));
-        lista.mostrarProductos();
-        lista.editarProducto(0);
-        lista.editarProducto(10);
-        lista.mostrarProductos();
+        lista.agregarProducto(new Producto("1",10,10,10,10));//
+        lista.agregarProducto(new Producto("2",11,10,10,10));//
+        lista.agregarProducto(new Producto("3",1,10,10,10));//
+        lista.agregarProducto(new Producto("4",2,10,10,10));//
+        lista.agregarProducto(new Producto("5",12,10,10,10));//
+        lista.agregarProducto(new Producto("6",16,10,10,10));//
+        lista.agregarProducto(new Producto("7",19,10,10,10));//
+        lista.buscar(0);
+        lista.buscar(19);
     }
     
 }

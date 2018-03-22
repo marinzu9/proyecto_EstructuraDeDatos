@@ -60,7 +60,10 @@ public class ListaProductos {
                     +"\n==========================\n";
                 aux = aux.getSiguiente();
             }
-            System.out.println(s);
+            JOptionPane.showMessageDialog(null, s);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"No hay productos en lista.");
         }
     }
     
@@ -146,5 +149,77 @@ public class ListaProductos {
         }
     }
     
+    public void eliminarProducto(int codigo){
+        if(!listaVacia()){
+            Nodo aux = existe(codigo);
+            if(aux!=null){
+                // revisar si es el ultimo dato en la lista
+                if(ultimo == inicio){
+                    aux.setDato(null);
+                    inicio = null;
+                    ultimo = null;
+                    JOptionPane.showMessageDialog(null, "Ultimo dato en lista eliminado");
+                }
+                // si no, proceder normal
+                else{
+                    // es el primer dato en lista?
+                    if(aux==inicio){
+                        inicio = aux.getSiguiente(); // pasar el inicio al siguiente (existe me devuelve el nodo con el puntero)
+                        ultimo.setSiguiente(inicio); // actualizar el ultimo porque el primero acaba de cambiar
+                        JOptionPane.showMessageDialog(null, aux.getDato().getNombre()+" eliminado.");
+                        aux.setDato(null); // pongo ese dato en null
+                    }
+                    // es el ultimo en la lista?
+                    else if(aux == ultimo){
+                        Nodo temp = inicio;
+                        // obtener al que esta antes del ultimo ya que este sera el nuevo ultimo
+                        while(temp.getSiguiente()!=ultimo){
+                            temp = temp.getSiguiente();
+                        }
+                        ultimo = temp; // temp tiene el nodo que estaba antes del ultimo, actualizo
+                        ultimo.setSiguiente(inicio); // le actualizo el puntero
+                        JOptionPane.showMessageDialog(null, aux.getDato().getNombre()+" eliminado.");
+                        aux.setDato(null); // pongo ese dato en null
+                    }
+                    // esta en el medio
+                    else{
+                        Nodo temp = inicio;
+                        // obtener al que esta antes del que queremos eliminar
+                        while(temp.getSiguiente()!=aux){
+                            temp = temp.getSiguiente();
+                        }
+                        temp.setSiguiente(aux.getSiguiente()); // le pongo al que esta antes del que vamos a eliminar el puntero hacia el
+                        //siguiente del que estamos eliminando
+                        JOptionPane.showMessageDialog(null, aux.getDato().getNombre()+" eliminado.");
+                        aux.setDato(null); // pongo ese dato en null
+                    }
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Codigo no pertenece a ningun producto. ");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Lista vacia");
+        }
+    }
+    
+    public void buscar(int codigo){
+        if(!listaVacia()){
+            Nodo existe = existe(codigo);
+            if(existe!=null){
+                JOptionPane.showMessageDialog(null, "\n====================\nDatos del producto:\n"
+                        + "Codigo: "+existe.getDato().getCodigo()+"\nNombre: "+existe.getDato().getNombre()+
+                        "\nPrecio de compra: "+existe.getDato().getPrecioCompra()+"\nPrecio de venta: "+existe.getDato().getPrecioVenta()
+                +"\nCantidad en bodega: "+existe.getDato().getCantidadEnBodega()+"\n====================\n");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Codigo no pertenece a ningun producto. ");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Lista vacia");
+        }
+    }
     
 }
