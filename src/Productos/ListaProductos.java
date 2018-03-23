@@ -222,4 +222,61 @@ public class ListaProductos {
         }
     }
     
+    //Facturacion Temporal
+    
+     public void mostrarBodega(){
+        if(!listaVacia()){
+            Nodo aux = inicio;
+            String s = "Productos en Bodega: \n";
+            s+="\nNombre del producto: "+aux.getDato().getNombre()+"\nCantidad en Stock: "
+                    +aux.getDato().getCantidadEnBodega()+
+                    "\n==========================\n";
+            aux = aux.getSiguiente();
+            while(aux!=inicio){
+                 s+="\nNombre del producto: "+aux.getDato().getNombre()+
+                         "\nCantidad en Stock: "+aux.getDato().getCantidadEnBodega()+
+                         "\n==========================\n";
+                aux = aux.getSiguiente();
+            }
+            JOptionPane.showMessageDialog(null, s);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"No hay productos en lista.");
+        }
+    }
+     
+     
+     public void mostrarProductosBajos(){
+           if(!listaVacia()){
+            Nodo aux = inicio;
+            String s = "Productos bajos en stock: \n";
+            if(aux.getDato().getCantidadEnBodega()<=5){
+                  s+="\nNombre del producto: "+aux.getDato().getNombre()+"\nCantidad en Stock: "
+                    +aux.getDato().getCantidadEnBodega()+
+                    "\n==========================\n";
+            } 
+              aux = aux.getSiguiente();
+            while(aux!=inicio){
+                  if(aux.getDato().getCantidadEnBodega()<=5){
+                  s+="\nNombre del producto: "+aux.getDato().getNombre()+"\nCantidad en Stock: "
+                    +aux.getDato().getCantidadEnBodega()+
+                    "\n==========================\n";
+            }
+              aux = aux.getSiguiente();
+            }
+            JOptionPane.showMessageDialog(null, s);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"No hay productos en lista.");
+        }
+     }
+     
+     
+     public void facturaCliente(){
+         
+     }
+     
+     
+    
+    
 }
