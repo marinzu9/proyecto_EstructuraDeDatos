@@ -1,4 +1,4 @@
-package proyectoestructuradedatos;
+package Productos;
 
 /**
  * Clase producto que contendra todo lo relevate a
@@ -23,7 +23,12 @@ public final class Producto {
     }
     
     
-
+    
+    // constructor para crear objetos sin parametros
+    public Producto (){
+        
+    }
+    
     public String getNombre() {
         return nombre;
     }

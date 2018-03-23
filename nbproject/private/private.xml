@@ -2,8 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/gabriek/Documents/programacion/java_programs/estructura_de_datos/Proyecto/ProyectoEstructuraDeDatos/src/proyectoestructuradedatos/Main.java</file>
+        <group/>
+        <group name="ProyecoEstructuras">
+            <file>file:/D:/Alonso/Documents/Universidad%20Fidelitas/Estructura%20de%20datos/Proyecto%20de%20Estructuras%20de%20Datos/proyecto_EstructuraDeDatos-master/proyecto_EstructuraDeDatos-master/src/Productos/ListaProductos.java</file>
+            <file>file:/D:/Alonso/Documents/Universidad%20Fidelitas/Estructura%20de%20datos/Proyecto%20de%20Estructuras%20de%20Datos/proyecto_EstructuraDeDatos-master/proyecto_EstructuraDeDatos-master/src/Productos/Producto.java</file>
+            <file>file:/D:/Alonso/Documents/Universidad%20Fidelitas/Estructura%20de%20datos/Proyecto%20de%20Estructuras%20de%20Datos/proyecto_EstructuraDeDatos-master/proyecto_EstructuraDeDatos-master/src/Productos/Menu.java</file>
         </group>
     </open-files>
 </project-private>
