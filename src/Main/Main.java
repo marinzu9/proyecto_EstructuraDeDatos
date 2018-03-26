@@ -7,6 +7,7 @@ package Main;
 
 //importar los productos
 import Productos.*;
+import Ventas.*;
 
 /**
  *
@@ -25,6 +26,9 @@ public class Main {
         lista.agregarProducto(new Producto("5",12,10,10,10));//
         lista.agregarProducto(new Producto("6",16,10,10,10));//
         lista.agregarProducto(new Producto("7",19,10,10,10));//
+        
+        Rutinas r = new Rutinas();
+        r.menu();
         
     }
     
